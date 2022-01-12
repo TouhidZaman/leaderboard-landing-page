@@ -128,7 +128,8 @@ hr {
 /* LATEST COURSES  */
 .courses {
     display: grid;
-    grid-template-columns: repeat(3, 253px);
+    /* grid-template-columns: repeat(3, 253px); */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 .course {
@@ -166,4 +167,27 @@ hr {
     padding: 0 5px;
     border-radius: 15px;
     color: #FF4A60;
+}
+
+/* FOOTER AREA  */
+footer {
+    background: white;
+    margin-top: 36px;
+}
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+.footer-content h3{
+    margin: 0;
+    color: #562EFF;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 0.9px;
+    line-height: 40px
+}
+.footer-content p{
+    margin: 10px 0 0;
+    color:dimgray;
+    font-size: 14px;
 }
