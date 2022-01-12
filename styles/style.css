@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #E5E5E5;
+    background: #F3F1FF;
 }
 .container,
 .navigation-container {
@@ -49,7 +49,9 @@ nav a {
     height: 51px;
     margin-right: 15px;
 }
-
+.navigations .menu-bars {
+    display: none;
+}
 .navigations ul {
     display: flex;
     align-items: center;
@@ -128,8 +130,7 @@ hr {
 /* LATEST COURSES  */
 .courses {
     display: grid;
-    /* grid-template-columns: repeat(3, 253px); */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 253px);
     gap: 25px;
 }
 .course {
@@ -190,4 +191,82 @@ footer {
     margin: 10px 0 0;
     color:dimgray;
     font-size: 14px;
+}
+
+/* STYLESHEET FOR MOBILE  */
+@media only screen and (max-width: 688px) {
+    /* COMMON STYLE  */
+    .section-heading {
+        font-size: 20px;
+    }
+
+    /* NAVIGATION AREA  */
+    .navigation-container {
+        width: 90%;
+    }
+    .container {
+        width: 100%;
+    }
+    .navigations {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .navigations .menu-bars {
+        display: block;
+    }
+    .menu-bars .bar {
+        width: 45px;
+        height: 7px;
+        margin: 7px 0;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .navigations ul {
+        display: none
+    }
+    /* TOP PLAYERS  */
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player {
+        flex-direction: column;
+    }
+    .player h3 {
+        font-size: 17px;
+        margin-left:0;
+    }
+
+    /* TOP BLOGS */
+    .blogs {
+       grid-template-columns: 1fr;
+    }
+    .blog .thumbnail img {
+        height:100px;
+        width: 120px;
+    }
+    .blog-info h3 {
+        font-size: 18px;
+    }
+    /* LATEST COURSES  */
+    .courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .course {
+        width: 300px;
+    }
+    .course-details h3 {
+        font-size: 18px;
+    }
+    .course .thumbnail img {
+       width: 100%;
+       height: 100%;
+    }
+    /* FOOTER AREA  */
+    .footer-content h3{
+        font-size: 24px;
+    }
 }
